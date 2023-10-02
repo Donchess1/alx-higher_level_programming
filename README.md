@@ -1,1 +1,1 @@
-This is the beginning of my python learning
+npw, lets get started with higher languages
