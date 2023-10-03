@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# 2-print_alphabet.py
 
-for letter in range(97, 123):
-    print(f"{(chr(letter))}", end="")
-print()
+alphabet = ''.join(chr(letter) for letter in range(97, 123))
+print(alphabet)
