@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
 def pow(a, b):
-    return (a ** b)x
+    return (a ** b)
