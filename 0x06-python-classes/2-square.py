@@ -3,9 +3,7 @@
 class Square:
     "square class"
     def __init__(self, size=0):
-        "constructor initialing size to 0.
-        Args:
-            size(int): the size of square."
+        "constructor initialing size to 0."
         if not isinstance(size, int):
             raise TypeError("enter int size")
         elif size<0:
