@@ -5,5 +5,4 @@
 class Square:
     """A class for square"""
 
-
     pass
