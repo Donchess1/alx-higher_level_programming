@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 "square module"
+
+
 class Square:
     "define the class square"
     def __init__(self, size=0):
@@ -16,5 +18,5 @@ class Square:
         self.__size = value
         def area(self):
             "return area"
-        result =self.__size * self.__size
+        result = self.__size * self.__size
         return result
