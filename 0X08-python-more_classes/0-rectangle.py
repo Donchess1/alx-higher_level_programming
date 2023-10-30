@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"a rectangle class"
+"a rect class"
 class Rectangle:
     "rectangle class"
     pass
