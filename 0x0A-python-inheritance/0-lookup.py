@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"
-This is a lookup function
-"
+"This is a lookup function"
 
 
 def lookup(obj):
