@@ -14,13 +14,12 @@ class Rectangle(Base):
             x (int): coordinate x
             y (int): coordinate y
             id (int): unique number of rectangle
-        
         Attributes:
             __width (int): This is the rectangle's width
             __height (int): This is the rectangle's width
             __x (int): coordinate x
             __y (int): coordinate y
-            id (int): unique number of rectangle"""
+            """
 
         super().__init__(id)
         self.width = width
@@ -33,9 +32,9 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError(f"{arg} must be an integer")
         if arg in ["x", "y"] and value < 0:
-                raise ValueError(f"{arg} must be >= 0")
+            raise ValueError(f"{arg} must be >= 0")
         elif arg in ["width", "height"] and value <= 0:
-                raise ValueError(f"{arg} must be > 0")
+            raise ValueError(f"{arg} must be > 0")
 
     @property
     def width(self):
@@ -70,7 +69,7 @@ class Rectangle(Base):
         self.int_validate("x", value)
         self.__x = value
 
-     @property
+    @property
     def y(self):
         """y getter"""
         return self.__y
@@ -83,7 +82,7 @@ class Rectangle(Base):
 
     def area(self):
         """initializes area of rectangle"""
-        return(self.width * self.height)
+        return self.width * self.height
 
     def display(self):
         """displays the recangle"""
@@ -92,7 +91,7 @@ class Rectangle(Base):
         for h in range(self.height):
             for w in range(self.width + self.x):
                 if w < self.x:
-                    print(" ", end="" )
+                    print(" ", end="")
                 else:
                     print("#", end="")
             print("")
@@ -101,11 +100,11 @@ class Rectangle(Base):
         """the rectangle string method"""
         a = "[{}] ({})".format(self.__class__.__name__, self.id)
         b = "{}"/"{}" - ("{}"/"{}").format(self.x, self.y, self.width, self.height)
-        return(a + b)
+        return a + b
     def update(self, *args):
         """updating recttangle with kwargs"""
         if args:
-            attributes =["id", "width", "height", "x", "y"]
+            attributes = ["id", "width", "height", "x", "y"]
             for i, value in enumerate(args):
                 setattr(self, attributes[i], value)
         elif kwargs:
