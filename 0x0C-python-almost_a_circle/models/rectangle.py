@@ -106,9 +106,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """the rectangle string method"""
-        a = "[{}] ({})".format(self.__class__.__name__, self.id)
-        b = "{}"/"{}"-"{}"/"{}".format(self.x, self.y, self.width, self.height)
-        return a + b
+        return "[Rectangle] ({}) {}/{}-{}/{}".format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args):
         """updating recttangle with kwargs"""
