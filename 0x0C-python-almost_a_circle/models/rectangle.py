@@ -110,7 +110,7 @@ class Rectangle(Base):
                                                      self.x, self.y,
                                                      self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updating recttangle with kwargs"""
         if args:
             attributes = ["id", "width", "height", "x", "y"]
