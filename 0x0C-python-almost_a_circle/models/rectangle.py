@@ -2,6 +2,7 @@
 "...rectangle's model"
 from models.base import Base
 
+
 class Rectangle(Base):
     """this is the Rectangle class"""
 
@@ -106,8 +107,9 @@ class Rectangle(Base):
     def __str__(self):
         """the rectangle string method"""
         a = "[{}] ({})".format(self.__class__.__name__, self.id)
-        b = "{}"/"{}" - ("{}"/"{}").format(self.x, self.y, self.width, self.height)
+        b = "{}"/"{}"-"{}"/"{}".format(self.x, self.y, self.width, self.height)
         return a + b
+
     def update(self, *args):
         """updating recttangle with kwargs"""
         if args:
