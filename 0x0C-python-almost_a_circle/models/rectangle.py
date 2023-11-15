@@ -2,7 +2,6 @@
 "...rectangle's model"
 
 from models.base import Base
-
 class Rectangle(Base):
     """this is the Rectangle class"""
 
@@ -27,15 +26,6 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    def int_validate(self, arg, value):
-        """initializes the value check condition"""
-        if not isinstance(value, int):
-            raise TypeError(f"{arg} must be an integer")
-        if arg in ["x", "y"] and value < 0:
-            raise ValueError(f"{arg} must be >= 0")
-        if arg in ["width", "height"] and value <= 0:
-            raise ValueError(f"{arg} must be > 0")
-
     @property
     def width(self):
         """width getter"""
@@ -44,7 +34,10 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """validates the property of width"""
-        self.int_validate("width", value)
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -55,7 +48,10 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """validates the property of height"""
-        self.int_validate("height", value)
+         if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if width < 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -66,7 +62,10 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """validates the property of x"""
-        self.int_validate("x", value)
+         if not isinstance(value, int):
+            raise TypeError("x must be an integer")
+        if width < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -77,7 +76,10 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """validates the property of y"""
-        self.int_validate("y", value)
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        if width < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
 
     def area(self):
