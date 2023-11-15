@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 "...rectangle's model"
-
 from models.base import Base
+
 class Rectangle(Base):
     """this is the Rectangle class"""
 
-    def __init__(self, width, height, x, y):
+    def __init__(self, width, height, x, y, id=None):
         """Initiate the Rectangle.
         Args:
             width (int): This is the rectangle's width
