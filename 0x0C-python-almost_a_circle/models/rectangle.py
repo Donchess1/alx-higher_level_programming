@@ -6,7 +6,7 @@ from models.base import Base
 class Rectangle(Base):
     """this is the Rectangle class"""
 
-    def __init__(self, width, height, x, y, id=None):
+    def __init__(self, width, height, x, y):
         """Initiate the Rectangle.
         Args:
             width (int): This is the rectangle's width
@@ -33,7 +33,7 @@ class Rectangle(Base):
             raise TypeError(f"{arg} must be an integer")
         if arg in ["x", "y"] and value < 0:
             raise ValueError(f"{arg} must be >= 0")
-        elif arg in ["width", "height"] and value <= 0:
+        if arg in ["width", "height"] and value <= 0:
             raise ValueError(f"{arg} must be > 0")
 
     @property
@@ -86,11 +86,11 @@ class Rectangle(Base):
 
     def display(self):
         """displays the recangle"""
-        for rows in range(self.y):
+        for _ in range(self.y):
             print("")
-        for h in range(self.height):
-            for w in range(self.width + self.x):
-                if w < self.x:
+        for _ in range(self.height):
+            for _ in range(self.width + self.x):
+                if _ < self.x:
                     print(" ", end="")
                 else:
                     print("#", end="")
